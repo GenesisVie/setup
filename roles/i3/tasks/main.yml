@@ -1,0 +1,20 @@
+---
+- name: install i3
+  pacman:
+    name: '{{ item }}'
+    state: present
+  become: true
+  with_items:
+    - i3-wm
+    - i3blocks
+    - i3lock
+
+- name: create i3 config directory
+  file:
+    path: '{{ defaults.config_home }}/i3'
+    state: directory
+
+- name: configure i3
+  template:
+    src: config.j2
+    dest: '{{ defaults.config_home }}/i3/config'

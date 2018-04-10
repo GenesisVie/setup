@@ -17,9 +17,4 @@
     src: functions
     dest: '{{ defaults.config_home }}/fish/'
 
-- name: copy completions
-  copy:
-    src: completions
-    dest: '{{ defaults.config_home }}/fish/'
-
 - include_tasks: fisherman.yml

@@ -25,14 +25,38 @@
     regexp: '^SET fish_color_{{ item.key }}:'
     line: "SET fish_color_{{ item.key }}:{{ item.value|fishd_escape|replace('\\x20', '\\x1e') }}"
   with_dict:
-    autosuggestion: "brblack --italics --dim"
-    command: "white --bold"
-    comment: "brblack"
-    end: "brgreen --bold"
-    error: "brred"
-    param: "brblue"
-    quote: "bryellow --italics"
-    redirection: "brmagenta --bold"
+    autosuggestion: "006363"
+    cancel: "-r"
+    command: "98971a  --bold"
+    comment: "FF9640"
+    cwd: "green"
+    cwd_root: "red"
+    end: "green"
+    error: "d65d0e"
+    escape: "bryellow  --bold"
+    history_current: "--bold"
+    host: "normal"
+    match: "--background=brblue"
+    normal: "normal"
+    operator: "bryellow"
+    param: "33CCCC"
+    quote: "5CCCCC"
+    redirection: "BF7130"
+    search_match: "83a598"
+    selection: "white  --bold  --background=brblack"
+    status: "red"
+    user: "brgreen"
+    valid_path: "--underline"
+
+- name: configure pager colors
+  lineinfile:
+    path: '{{ defaults.config_home }}/fish/fishd.{{ ansible_hostname }}'
+    regexp: '^SET fish_pager_color_{{ item.key }}:'
+    line: "SET fish_pager_color_{{ item.key }}:{{ item.value|fishd_escape|replace('\\x20', '\\x1e') }}"
+  with_dict:
+    description: "B3A06D  yellow"
+    prefix: "white  --bold  --underline"
+    progress: "brwhite  --background=cyan"
 
 
 - name: configure other parameters

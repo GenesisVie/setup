@@ -6,9 +6,13 @@
       
     - role: fish
       tags: fish
+
     - role: yaourt
       tags: yaourt
-#
+
+    - role: pacman
+      tags: pacman
+
     - role: lightdm
       tags: lightdm
 #

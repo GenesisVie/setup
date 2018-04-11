@@ -1,59 +1,95 @@
-# see man termite.config for more information
-
 [options]
-allow_bold = true
-audible_bell = false
-clickable_url = true
-hyperlinks = true
-cursor_blink = system
-cursor_shape = block
-dynamic_title = true
-filter_unmatched_urls = true
-font = DejaVuSansMono 13
-fullscreen = true
-icon_name = utilities-terminal
-mouse_autohide = true
-scrollback_lines = 10000
-scroll_on_keystroke = true
 scroll_on_output = false
-search_wrap = false
-size_hints = true
+scroll_on_keystroke = true
+audible_bell = false
+mouse_autohide = false
+allow_bold = true
+dynamic_title = true
 urgent_on_bell = true
+clickable_url = true
+font = DejaVuSansMono 12
+scrollback_lines = 10000
+search_wrap = true
+#icon_name = terminal
+#geometry = 640x480
+
+# "system", "on" or "off"
+cursor_blink = system
+
+# "block", "underline" or "ibeam"
+cursor_shape = block
+
+# $BROWSER is used by default if set, with xdg-open as a fallback
+#browser = xdg-open
+
+# set size hints for the window
+#size_hints = false
+
+# Hide links that are no longer valid in url select overlay mode
+filter_unmatched_urls = true
+
+# emit escape sequences for extra modified keys
+#modify_other_keys = false
 
 [colors]
-foreground      = #{{ theme.light_white }}
-foreground_bold = #{{ theme.very_light_white }}
-cursor          = #{{ theme.white }}
-{% set red, green, blue = theme.black|fromhex %}
-background      = rgba({{ red }}, {{ green }}, {{ blue }}, 0.9)
+# Base16 Solarized Dark
+# Author: Ethan Schoonover (http://ethanschoonover.com/solarized)
 
-color0  = #{{ theme.dark_black }}
-color7  = #{{ theme.white }}
-color8  = #{{ theme.light_gray }}
-color15 = #{{ theme.very_light_white }}
+foreground      = #ebdbb2
+foreground_bold = #eee8d5
+cursor          = #a89984
+background      = #32302f
 
-color1  = #{{ theme.dark_red }}
-color9  = #{{ theme.red }}
+# 16 color space
 
-color2  = #{{ theme.dark_green }}
-color10 = #{{ theme.green }}
+# Black, Gray, Silver, White
+color0  = #002b36
+color8  = #657b83
+color7  = #93a1a1
+color15 = #fdf6e3
 
-color3  = #{{ theme.dark_yellow }}
-color11 = #{{ theme.yellow }}
+# Red
+color1  = #dc322f
+color9  = #dc322f
 
-color4  = #{{ theme.dark_blue }}
-color12 = #{{ theme.blue }}
+# Green
+color2  = #859900
+color10 = #859900
 
-color5  = #{{ theme.dark_purple }}
-color13 = #{{ theme.purple }}
+# Yellow
+color3  = #b58900
+color11 = #b58900
 
-color6  = #{{ theme.dark_teal }}
-color14 = #{{ theme.teal }}
+# Blue
+color4  = #268bd2
+color12 = #268bd2
 
-# Extra Colors
-color16 = #{{ theme.orange }}
-color17 = #{{ theme.dark_orange }}
-color18 = #{{ theme.light_black }}
-color19 = #{{ theme.very_light_black }}
-color20 = #{{ theme.dark_white }}
-color21 = #{{ theme.light_white }}
+# Purple
+color5  = #6c71c4
+color13 = #6c71c4
+
+# Teal
+color6  = #2aa198
+color14 = #2aa198
+
+# Extra colors
+color16 = #cb4b16
+color17 = #d33682
+color18 = #073642
+color19 = #586e75
+color20 = #839496
+color21 = #eee8d5
+
+
+[hints]
+#font = Monospace 12
+#foreground = #dcdccc
+#background = #3f3f3f
+#active_foreground = #e68080
+#active_background = #3f3f3f
+#padding = 2
+#border = #3f3f3f
+#border_width = 0.5
+#roundness = 2.0
+
+# vim: ft=dosini cms=#%s

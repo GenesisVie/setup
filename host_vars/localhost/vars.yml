@@ -5,19 +5,17 @@ defaults:
   cache_home: "{{ ansible_user_dir }}/.cache"
 
   desktop_dir: "{{ ansible_user_dir }}/Desktop"
-  documents_dir: "{{ ansible_user_dir }}/Documents"
+  documents_dir: "{{ ansible_user_dir }}"
   download_dir: "{{ ansible_user_dir }}/Downloads"
-  music_dir: "{{ ansible_user_dir }}/Music"
+  music_dir: "{{ ansible_user_dir }}"
   pictures_dir: "{{ ansible_user_dir }}/Pictures"
   publicshare_dir: "{{ ansible_user_dir }}"
   templates_dir: "{{ ansible_user_dir }}"
-  videos_dir: "{{ ansible_user_dir }}/Videos"
+  videos_dir: "{{ ansible_user_dir }}"
 
   editor: nvim
   sudo_editor: nvim
   visual: nvim
-  pager: vimpager
 
   term: termite
   browser: firefox
-  printer: ENVY_4500

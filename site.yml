@@ -7,8 +7,14 @@
     - role: fish
       tags: fish
 
+    - role: time
+      tags: time
+
     - role: locale
       tags: locale
+
+    - role: console_keyboard_layout
+      tags: console_keyboard_layout
 
     - role: yaourt
       tags: yaourt

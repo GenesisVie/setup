@@ -7,6 +7,9 @@
     - role: fish
       tags: fish
 
+    - role: locale
+      tags: locale
+
     - role: yaourt
       tags: yaourt
 

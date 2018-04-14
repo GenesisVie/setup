@@ -40,6 +40,9 @@
         - intel_graphics
         - display
 
+    - role: backlight
+      tags: backlight
+
     - role: env-vars
       tags: env-vars
 #

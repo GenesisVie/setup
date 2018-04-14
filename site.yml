@@ -24,7 +24,12 @@
 
     - role: lightdm
       tags: lightdm
-#
+
+    - role: xorg
+      tags:
+        - xorg
+        - display
+
     - role: env-vars
       tags: env-vars
 #

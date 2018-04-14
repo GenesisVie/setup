@@ -30,6 +30,11 @@
         - xorg
         - display
 
+    - role: nvidia
+      tags:
+        - nvidia
+        - display
+
     - role: env-vars
       tags: env-vars
 #

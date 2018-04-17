@@ -18,7 +18,7 @@
     nerd_fonts: 'yes'
     color_scheme: gruvbox
     newline_cursor: 'no'
-
+ 
 
 - name: configure colors
   lineinfile:
@@ -55,6 +55,7 @@
     path: '{{ defaults.config_home }}/fish/fishd.{{ ansible_hostname }}'
     regexp: '^SET fish_pager_color_{{ item.key }}:'
     line: "SET fish_pager_color_{{ item.key }}:{{ item.value|fishd_escape|replace('\\x20', '\\x1e') }}"
+    create: yes
   with_dict:
     description: "B3A06D  yellow"
     prefix: "white  --bold  --underline"

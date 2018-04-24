@@ -7,12 +7,9 @@ codeset: UTF-8
 locale: '{{ language }}_{{ territory }}.{{ codeset }}'
 
 keyboard:
-  - layout: us
-    variant: intl
-  - layout: us
-    variant: dvorak-intl
+  - layout: fr
 
-hostname: carokann
+hostname: vie
 
 defaults:
   config_home: "{{ ansible_user_dir }}/.config"

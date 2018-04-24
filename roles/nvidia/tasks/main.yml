@@ -7,4 +7,4 @@
     - nvidia
     - nvidia-utils
 
-- include_tasks: bumblebee.yml
+# - include_tasks: bumblebee.yml

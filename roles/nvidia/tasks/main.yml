@@ -7,4 +7,8 @@
     - nvidia
     - nvidia-utils
 
+<<<<<<< HEAD
     #- include_tasks: bumblebee.yml
+=======
+# - include_tasks: bumblebee.yml
+>>>>>>> bd192d0e04df413b6f1d5db6e5e16495a3f8eca3
